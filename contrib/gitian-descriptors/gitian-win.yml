@@ -22,7 +22,7 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/dashpay/dash.git"
+- "url": "https://github.com/hatchpay/hatch.git"
   "dir": "dash"
 files: []
 script: |
