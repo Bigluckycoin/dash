@@ -1,0 +1,2 @@
+usr/local/bin/hatchd usr/bin
+usr/local/bin/hatch-cli usr/bin

@@ -1,0 +1,22 @@
+[Unit]
+Description=Hatch's distributed currency daemon
+After=network.target
+
+[Service]
+User=hatchcore
+Group=hatchcore
+
+Type=forking
+PIDFile=/var/lib/hatchd/hatchd.pid
+ExecStart=/usr/bin/hatchd -daemon -pid=/var/lib/hatchd/hatchd.pid \
+-conf=/etc/hatchcore/hatch.conf -datadir=/var/lib/hatchd -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

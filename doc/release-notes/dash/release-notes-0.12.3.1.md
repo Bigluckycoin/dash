@@ -1,9 +1,9 @@
-Dash Core version 0.12.3.1
+Hatch Core version 0.12.3.1
 ==========================
 
 Release is now available from:
 
-  <https://www.dash.org/downloads/#wallets>
+  <https://www.hatch.org/downloads/#wallets>
 
 This is a new major version release, bringing new features, various bugfixes and other
 improvements.
@@ -21,15 +21,15 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over /Applications/Dash-Qt (on Mac) or
-dashd/dash-qt (on Linux).
+installer (on Windows) or just copy over /Applications/Hatch-Qt (on Mac) or
+hatchd/hatch-qt (on Linux).
 
 Downgrade warning
 -----------------
 
 ### Downgrade to a version < 0.12.2.2
 
-Because release 0.12.2.2 included the [per-UTXO fix](release-notes/dash/release-notes-0.12.2.2.md#per-utxo-fix)
+Because release 0.12.2.2 included the [per-UTXO fix](release-notes/hatch/release-notes-0.12.2.2.md#per-utxo-fix)
 which changed the structure of the internal database, you will have to reindex
 the database if you decide to use any pre-0.12.2.2 version.
 
@@ -64,7 +64,7 @@ If a node connects to the wrong network, it will immediately be disconnected.
 New format of network message signatures
 ----------------------------------------
 
-We introduced a new signature format for Dash-specific network messages,
+We introduced a new signature format for Hatch-specific network messages,
 read more [here](https://github.com/hatchpay/hatch/pull/1936) and [here](https://github.com/hatchpay/hatch/pull/1937).
 We also introduced a new spork `SPORK_6_NEW_SIGS` which is going to be used to activate the new format after the network has finished the upgrade.
 Note that old pre-12.3 nodes won't be able to recognize and verify new signatures after `SPORK_6_NEW_SIGS` activates.
@@ -110,7 +110,7 @@ Support for pruned nodes in Lite Mode
 -------------------------------------
 
 It is now possible to run a pruned node which stores only some recent blocks and not the whole blockchain.
-However this option is only available in so called Lite Mode. In this mode, Dash specific features are disabled, meaning
+However this option is only available in so called Lite Mode. In this mode, Hatch specific features are disabled, meaning
 that such nodes won't fully validate the blockchain (masternode payments and superblocks).
 PrivateSend and InstantSend functions are also disabled on such nodes. Such nodes are comparable to SPV-like nodes
 in terms of security and validation - it relies a lot on surrounding nodes, so please keep this in mind if you decide to
@@ -129,7 +129,7 @@ There are a few changes in existing RPC interfaces in this release:
 - `gobject count`, `masternode count` and `masternode list` will now by default return JSON formatted output;
 If you rely on the old output format, you can still specify an additional parameter for backwards compatibility (`all` for `count` and `status` for `list`);
 - `masternodelist` has a few new modes: `daemon`, `json`, `sentinel`;
-- `debug` rpc now requires categories to be separated via `+`, not `,` like before (e.g. `dash+net`);
+- `debug` rpc now requires categories to be separated via `+`, not `,` like before (e.g. `hatch+net`);
 - `getchaintips` now shows the block fork occurred in `forkpoint` field;
 - `getrawmempool`'s has InstantSend-related info (`instantsend` and `instantlock`);
 - `getgovernanceinfo` has new field `sentinelpingmaxseconds`;
@@ -148,11 +148,11 @@ Command-line options
 --------------------
 
 New cmd-line options:
-- introduced in Dash Core 0.12.3.1: `allowprivatenet`, `bip9params`, `sporkaddr`, `devnet`;
+- introduced in Hatch Core 0.12.3.1: `allowprivatenet`, `bip9params`, `sporkaddr`, `devnet`;
 - backported from Bitcoin Core 0.13/0.14: `blockreconstructionextratxn`, `maxtimeadjustment`, `maxtipage`,
 `incrementalrelayfee`, `dustrelayfee`, `blockmintxfee`.
 
-See `Help -> Command-line options` in Qt wallet or `dashd --help` for more info.
+See `Help -> Command-line options` in Qt wallet or `hatchd --help` for more info.
 
 New Masternode Information Dialog
 ---------------------------------
@@ -160,7 +160,7 @@ New Masternode Information Dialog
 You can now double-click on your masternode in `My Masternodes` list on `Masternodes` tab to reveal the new
 Masternode Information dialog. It will show you some basic information as well as software versions reported by the
 masternode. There is also a QR code now which encodes corresponding masternode private key (the one you set with
-mnprivkey during MN setup and NOT the one that controls the 1000 DASH collateral) which should make the process of pairing with
+mnprivkey during MN setup and NOT the one that controls the 1000 HATCH collateral) which should make the process of pairing with
 mobile software allowing you to vote with your masternode a bit easier (this software is still in development).
 
 Testnet fixes
@@ -175,7 +175,7 @@ case of future ASIC uses on testnet.
 Using masternode lists for initial peers discovery
 --------------------------------------------------
 
-We now use a recent masternode list to feed the hardcoded seed nodes list in Dash Core. This list was previously
+We now use a recent masternode list to feed the hardcoded seed nodes list in Hatch Core. This list was previously
 unmaintained as we fully relied on DNS based discovery on startup. DNS discovery is still used as the main discovery
 method, but the hardcoded seed list should now be able to serve as a proper backup in case DNS fails for some reason.
 
@@ -199,7 +199,7 @@ You can read more about all changes in Bitcoin Core 0.13 and 0.14 in following d
 - [release-notes-0.14.2.md](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.14.2.md).
 
 Note that some features were already backported earlier (per-UTXO fix, -assumevalid, GUI overlay etc.) and some were not backported at all
-(SegWit and feefilter, you can read more about why we did so [here](https://blog.dash.org/segwit-lighting-rbf-in-dash-9536868ca861) and [here](https://github.com/hatchpay/hatch/pull/2025)).
+(SegWit and feefilter, you can read more about why we did so [here](https://blog.hatch.org/segwit-lighting-rbf-in-hatch-9536868ca861) and [here](https://github.com/hatchpay/hatch/pull/2025)).
 The alert system was also kept in place for now. We are going to continue backporting the most notable fixes and improvements from Bitcoin Core versions 0.15 and 0.16 in future releases.
 
 A lot of refactoring, code cleanups and other small fixes were done in this release again. We are going to continue making code more reliable and easier to review in future releases as well.
@@ -208,7 +208,7 @@ A lot of refactoring, code cleanups and other small fixes were done in this rele
 0.12.3.1 Change log
 ===================
 
-See detailed [change log](https://github.com/hatchpay/hatch/compare/v0.12.2.3...dashpay:v0.12.3.1) below.
+See detailed [change log](https://github.com/hatchpay/hatch/compare/v0.12.2.3...hatchpay:v0.12.3.1) below.
 
 ### Governance:
 - [`6c79c348e`](https://github.com/hatchpay/hatch/commit/6c79c348e) Drop "MAY, 2018" clause for proposal validation on mainnet (#2101)
@@ -268,7 +268,7 @@ See detailed [change log](https://github.com/hatchpay/hatch/compare/v0.12.2.3...
 - [`a648d6eff`](https://github.com/hatchpay/hatch/commit/a648d6eff) Drop delayed headers logic and fix duplicate initial headers sync by handling block inv correctly (#2032)
 - [`99085c5b6`](https://github.com/hatchpay/hatch/commit/99085c5b6) swap devnet magic bytes around (#2028)
 - [`a37dbd6d2`](https://github.com/hatchpay/hatch/commit/a37dbd6d2) Fix netfulfilledman usage (#2033)
-- [`08033ffe4`](https://github.com/hatchpay/hatch/commit/08033ffe4) Reject Dash-specific messages from obsolete peers (#1983)
+- [`08033ffe4`](https://github.com/hatchpay/hatch/commit/08033ffe4) Reject Hatch-specific messages from obsolete peers (#1983)
 - [`43671a39d`](https://github.com/hatchpay/hatch/commit/43671a39d) Deprecate nMnCount in mnget (#1942)
 - [`451f7f071`](https://github.com/hatchpay/hatch/commit/451f7f071) Fix issues with mnp, mnw and dsq signatures via new spork (SPORK_6_NEW_SIGS) (#1936)
 - [`048062641`](https://github.com/hatchpay/hatch/commit/048062641) Force masternodes to have listen=1 and maxconnections to be at least DEFAULT_MAX_PEER_CONNECTIONS (#1935)
@@ -280,10 +280,10 @@ See detailed [change log](https://github.com/hatchpay/hatch/compare/v0.12.2.3...
 - [`8f2c1998d`](https://github.com/hatchpay/hatch/commit/8f2c1998d) Rename vBlockHashesFromINV to vDelayedGetHeaders (#1909)
 - [`4719ec477`](https://github.com/hatchpay/hatch/commit/4719ec477) Remove some locking in net.h/net.cpp (#1905)
 - [`a6ba82ac9`](https://github.com/hatchpay/hatch/commit/a6ba82ac9) Use masternode list to generate hardcoded seeds (#1892)
-- [`1b1a440f4`](https://github.com/hatchpay/hatch/commit/1b1a440f4) Do not send dash-specific requests to masternodes before we are fully connected (#1882)
+- [`1b1a440f4`](https://github.com/hatchpay/hatch/commit/1b1a440f4) Do not send hatch-specific requests to masternodes before we are fully connected (#1882)
 - [`1ca270ed8`](https://github.com/hatchpay/hatch/commit/1ca270ed8) No need for msgMakerInitProto for sporks because we loop by fully connected nodes only now (#1877)
 - [`b84afb251`](https://github.com/hatchpay/hatch/commit/b84afb251) Allow to filter for fully connected nodes when calling CopyNodeVector (#1864)
-- [`532b9fa3d`](https://github.com/hatchpay/hatch/commit/532b9fa3d) Use OpenNetworkConnection instead of calling ConnectNode directly in Dash code (#1857)
+- [`532b9fa3d`](https://github.com/hatchpay/hatch/commit/532b9fa3d) Use OpenNetworkConnection instead of calling ConnectNode directly in Hatch code (#1857)
 - [`3aad9d908`](https://github.com/hatchpay/hatch/commit/3aad9d908) Fix logging in PushInventory (#1847)
 - [`81fb931fb`](https://github.com/hatchpay/hatch/commit/81fb931fb) Don't delay GETHEADERS when no blocks have arrived yet in devnet (#1807)
 
@@ -366,7 +366,7 @@ See detailed [change log](https://github.com/hatchpay/hatch/compare/v0.12.2.3...
 - [`836e10471`](https://github.com/hatchpay/hatch/commit/836e10471) Bump proto to 70210 (#2109)
 - [`23ba94b37`](https://github.com/hatchpay/hatch/commit/23ba94b37) Bump remaining min protocols (#2097)
 - [`9299a84b1`](https://github.com/hatchpay/hatch/commit/9299a84b1) Bump few consts (#2096)
-- [`7b43720f0`](https://github.com/hatchpay/hatch/commit/7b43720f0) Fix copying of final binaries into dashcore-binaries (#2090)
+- [`7b43720f0`](https://github.com/hatchpay/hatch/commit/7b43720f0) Fix copying of final binaries into hatchcore-binaries (#2090)
 - [`cc593615e`](https://github.com/hatchpay/hatch/commit/cc593615e) Bump copyright year to 2018 (#2087)
 - [`2129ee4d8`](https://github.com/hatchpay/hatch/commit/2129ee4d8) Add docker support when doing Gitian builds (#2084)
 - [`6a1456ef4`](https://github.com/hatchpay/hatch/commit/6a1456ef4) Update gitian key for codablock (#2085)
@@ -377,12 +377,12 @@ See detailed [change log](https://github.com/hatchpay/hatch/compare/v0.12.2.3...
 - [`1264a5577`](https://github.com/hatchpay/hatch/commit/1264a5577) Fix spork signature check for new nodes after SPORK_6_NEW_SIGS is switched to ON (#2060)
 - [`41680f4d9`](https://github.com/hatchpay/hatch/commit/41680f4d9) small cleanup in a few places (#2058)
 - [`741b94875`](https://github.com/hatchpay/hatch/commit/741b94875) Translations201804 (#2012)
-- [`8e24b087b`](https://github.com/hatchpay/hatch/commit/8e24b087b) replace boost iterators in dash-specific code (#2048)
+- [`8e24b087b`](https://github.com/hatchpay/hatch/commit/8e24b087b) replace boost iterators in hatch-specific code (#2048)
 - [`7719b7ec2`](https://github.com/hatchpay/hatch/commit/7719b7ec2) Update BIP147 deployment times, nMinimumChainWork and defaultAssumeValid (#2030)
 - [`b07503f01`](https://github.com/hatchpay/hatch/commit/b07503f01) Some cleanup (mostly trivial) (#2038)
 - [`f8e5c5d56`](https://github.com/hatchpay/hatch/commit/f8e5c5d56) Simplify spork defaults by using a map (#2037)
 - [`6dd8304a5`](https://github.com/hatchpay/hatch/commit/6dd8304a5) Remove duplication of "class CBlockIndex;" (#2036)
-- [`4ea790377`](https://github.com/hatchpay/hatch/commit/4ea790377) Dashify lib names (#2035)
+- [`4ea790377`](https://github.com/hatchpay/hatch/commit/4ea790377) Hatchify lib names (#2035)
 - [`53093c65b`](https://github.com/hatchpay/hatch/commit/53093c65b) Run tests in mocked time (#2031)
 - [`f7b9aae27`](https://github.com/hatchpay/hatch/commit/f7b9aae27) Correctly update pindexBestHeader and pindexBestInvalid in InvalidateBlock (#2029)
 - [`8b09e779b`](https://github.com/hatchpay/hatch/commit/8b09e779b) Bump testnet checkpoint and nMinimumChainWork/defaultAssumeValid params (#2026)
@@ -411,7 +411,7 @@ See detailed [change log](https://github.com/hatchpay/hatch/compare/v0.12.2.3...
 - [`e23f61822`](https://github.com/hatchpay/hatch/commit/e23f61822) Make TrafficGraphDataTests more general (#1943)
 - [`5b1c4d8a1`](https://github.com/hatchpay/hatch/commit/5b1c4d8a1) Few (mostly trivial) cleanups and fixes (#1940)
 - [`99273f63a`](https://github.com/hatchpay/hatch/commit/99273f63a) Use SPORK_6_NEW_SIGS to switch from signing string messages to hashes (#1937)
-- [`c65613350`](https://github.com/hatchpay/hatch/commit/c65613350) Switch masternode id in Dash data structures from CTxIn to COutPoint (#1933)
+- [`c65613350`](https://github.com/hatchpay/hatch/commit/c65613350) Switch masternode id in Hatch data structures from CTxIn to COutPoint (#1933)
 - [`2ea6f7d82`](https://github.com/hatchpay/hatch/commit/2ea6f7d82) Use `override` keyword for overriden class member functions (#1644)
 - [`d5ef77ba9`](https://github.com/hatchpay/hatch/commit/d5ef77ba9) Refactor: use constant refs and `Ret` suffix (#1928)
 - [`2e04864b2`](https://github.com/hatchpay/hatch/commit/2e04864b2) Replace boost::lexical_cast<int> with atoi (#1926)
@@ -419,7 +419,7 @@ See detailed [change log](https://github.com/hatchpay/hatch/compare/v0.12.2.3...
 - [`4528c735f`](https://github.com/hatchpay/hatch/commit/4528c735f) Replace some instantsend/privatesend magic numbers with constants (#1924)
 - [`120893c63`](https://github.com/hatchpay/hatch/commit/120893c63) Update timeLastMempoolReq when responding to MEMPOOL request (#1904)
 - [`bb20b4e7b`](https://github.com/hatchpay/hatch/commit/bb20b4e7b) Few cleanups after backporting (#1903)
-- [`a7fa07a30`](https://github.com/hatchpay/hatch/commit/a7fa07a30) Drop BOOST_FOREACH and use references in loops (const ref where applicable, Dash code only) (#1899)
+- [`a7fa07a30`](https://github.com/hatchpay/hatch/commit/a7fa07a30) Drop BOOST_FOREACH and use references in loops (const ref where applicable, Hatch code only) (#1899)
 - [`e0b6988a4`](https://github.com/hatchpay/hatch/commit/e0b6988a4) Various fixes and refactoring for Cache*Map classes (#1896)
 - [`99b2789a7`](https://github.com/hatchpay/hatch/commit/99b2789a7) Fix DeserializeAndCheckBlockTest benchmark and store hashDevnetGenesisBlock in `consensus` (#1888)
 - [`88646bd0d`](https://github.com/hatchpay/hatch/commit/88646bd0d) Rename `fMasterNode` to `fMasternodeMode` to clarify its meaning and to avoid confusion with `CNode::fMasternode` (#1874)
@@ -427,16 +427,16 @@ See detailed [change log](https://github.com/hatchpay/hatch/compare/v0.12.2.3...
 - [`9cee4193b`](https://github.com/hatchpay/hatch/commit/9cee4193b) Separate .h generation from .json/.raw for different modules (#1870)
 - [`83957f2d3`](https://github.com/hatchpay/hatch/commit/83957f2d3) Fix alertTests.raw.h (again) (#1869)
 - [`c13afaad8`](https://github.com/hatchpay/hatch/commit/c13afaad8) Fix alertTests.raw.h generation (#1868)
-- [`a46bf120b`](https://github.com/hatchpay/hatch/commit/a46bf120b) Don't directly call "wine test_dash.exe" and let "make check" handle it (#1841)
-- [`e805f790e`](https://github.com/hatchpay/hatch/commit/e805f790e) Automatically build and push docker image to docker.io/dashpay/dashd-develop (#1809)
-- [`d9058aa04`](https://github.com/hatchpay/hatch/commit/d9058aa04) Increase travis timeout for "wine src/test/test_dash.exe" call (#1820)
-- [`10786fe8e`](https://github.com/hatchpay/hatch/commit/10786fe8e) Use travis_wait for "wine test_dash.exe" call to fix timeouts (#1812)
+- [`a46bf120b`](https://github.com/hatchpay/hatch/commit/a46bf120b) Don't directly call "wine test_hatch.exe" and let "make check" handle it (#1841)
+- [`e805f790e`](https://github.com/hatchpay/hatch/commit/e805f790e) Automatically build and push docker image to docker.io/hatchpay/hatchd-develop (#1809)
+- [`d9058aa04`](https://github.com/hatchpay/hatch/commit/d9058aa04) Increase travis timeout for "wine src/test/test_hatch.exe" call (#1820)
+- [`10786fe8e`](https://github.com/hatchpay/hatch/commit/10786fe8e) Use travis_wait for "wine test_hatch.exe" call to fix timeouts (#1812)
 - [`4bce3bf8b`](https://github.com/hatchpay/hatch/commit/4bce3bf8b) Fix crash on exit when -createwalletbackups=0 (#1810)
 - [`cd9c6994c`](https://github.com/hatchpay/hatch/commit/cd9c6994c) Implement named devnets (#1791)
 - [`ebbd26a05`](https://github.com/hatchpay/hatch/commit/ebbd26a05) Drop IsInputAssociatedWithPubkey and optimize CheckOutpoint (#1783)
 
 ### Backports and related fixes:
-- See commit list [here](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/dash/release-notes-0.12.3-backports.md)
+- See commit list [here](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/hatch/release-notes-0.12.3-backports.md)
 
 
 Credits
@@ -461,13 +461,13 @@ Thanks to everyone who directly contributed to this release:
 
 As well as Bitcoin Core Developers and everyone who submitted issues,
 reviewed pull requests or helped translating on
-[Transifex](https://www.transifex.com/projects/p/dash/).
+[Transifex](https://www.transifex.com/projects/p/hatch/).
 
 
 Older releases
 ==============
 
-Dash was previously known as Darkcoin.
+Hatch was previously known as Darkcoin.
 
 Darkcoin tree 0.8.x was a fork of Litecoin tree 0.8, original name was XCoin
 which was first released on Jan/18/2014.
@@ -478,23 +478,23 @@ the 0.8.x tree and was first released on Mar/13/2014.
 Darkcoin tree 0.10.x used to be the closed source implementation of Darksend
 which was released open source on Sep/25/2014.
 
-Dash Core tree 0.11.x was a fork of Bitcoin Core tree 0.9,
-Darkcoin was rebranded to Dash.
+Hatch Core tree 0.11.x was a fork of Bitcoin Core tree 0.9,
+Darkcoin was rebranded to Hatch.
 
-Dash Core tree 0.12.0.x was a fork of Bitcoin Core tree 0.10.
+Hatch Core tree 0.12.0.x was a fork of Bitcoin Core tree 0.10.
 
-Dash Core tree 0.12.1.x was a fork of Bitcoin Core tree 0.12.
+Hatch Core tree 0.12.1.x was a fork of Bitcoin Core tree 0.12.
 
 These release are considered obsolete. Old release notes can be found here:
 
-- [v0.12.2.3](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/dash/release-notes-0.12.2.3.md) released Jan/12/2018
-- [v0.12.2.2](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/dash/release-notes-0.12.2.2.md) released Dec/17/2017
-- [v0.12.2](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/dash/release-notes-0.12.2.md) released Nov/08/2017
-- [v0.12.1](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/dash/release-notes-0.12.1.md) released Feb/06/2017
-- [v0.12.0](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/dash/release-notes-0.12.0.md) released Jun/15/2015
-- [v0.11.2](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/dash/release-notes-0.11.2.md) released Mar/04/2015
-- [v0.11.1](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/dash/release-notes-0.11.1.md) released Feb/10/2015
-- [v0.11.0](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/dash/release-notes-0.11.0.md) released Jan/15/2015
-- [v0.10.x](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/dash/release-notes-0.10.0.md) released Sep/25/2014
-- [v0.9.x](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/dash/release-notes-0.9.0.md) released Mar/13/2014
+- [v0.12.2.3](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/hatch/release-notes-0.12.2.3.md) released Jan/12/2018
+- [v0.12.2.2](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/hatch/release-notes-0.12.2.2.md) released Dec/17/2017
+- [v0.12.2](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/hatch/release-notes-0.12.2.md) released Nov/08/2017
+- [v0.12.1](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/hatch/release-notes-0.12.1.md) released Feb/06/2017
+- [v0.12.0](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/hatch/release-notes-0.12.0.md) released Jun/15/2015
+- [v0.11.2](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/hatch/release-notes-0.11.2.md) released Mar/04/2015
+- [v0.11.1](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/hatch/release-notes-0.11.1.md) released Feb/10/2015
+- [v0.11.0](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/hatch/release-notes-0.11.0.md) released Jan/15/2015
+- [v0.10.x](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/hatch/release-notes-0.10.0.md) released Sep/25/2014
+- [v0.9.x](https://github.com/hatchpay/hatch/blob/master/doc/release-notes/hatch/release-notes-0.9.0.md) released Mar/13/2014
 

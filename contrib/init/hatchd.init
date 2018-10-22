@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  hatchd The Hatch Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: hatchd
+# processname: hatchd
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/hatchd, see below
+if [ -f /etc/sysconfig/hatchd ]; then
+        . /etc/sysconfig/hatchd
+fi
+
+RETVAL=0
+
+prog=hatchd
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/hatchd
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/hatchd}
+
+# hatchd defaults to /usr/bin/hatchd, override with BITCOIND_BIN
+hatchd=${BITCOIND_BIN-/usr/bin/hatchd}
+
+# hatchd opts default to -disablewallet, override with BITCOIND_OPTS
+hatchd_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $hatchd $hatchd_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac
