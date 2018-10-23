@@ -1,9 +1,9 @@
-Hatch Core staging tree 0.12.3
+Hatch Core staging tree 1.0.0.1
 ===============================
 
 `master:` [![Build Status](https://travis-ci.org/hatchpay/hatch.svg?branch=master)](https://travis-ci.org/hatchpay/hatch) `develop:` [![Build Status](https://travis-ci.org/hatchpay/hatch.svg?branch=develop)](https://travis-ci.org/hatchpay/hatch/branches)
 
-https://www.hatch.org
+https://www.org
 
 
 What is Hatch?
@@ -16,7 +16,7 @@ are carried out collectively by the network. Hatch Core is the name of the open
 source software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Hatch Core software, see https://www.hatch.org/get-hatch/.
+the Hatch Core software, see https://www.org/get-hatch/.
 
 
 License
@@ -74,4 +74,4 @@ Translations are periodically pulled from Transifex and merged into the git repo
 **Important**: We do not accept translation changes as GitHub pull requests because the next
 pull from Transifex would automatically overwrite them again.
 
-Translators should also follow the [forum](https://www.hatch.org/forum/topic/hatch-worldwide-collaboration.88/).
+Translators should also follow the [forum](https://www.org/forum/topic/hatch-worldwide-collaboration.88/).
