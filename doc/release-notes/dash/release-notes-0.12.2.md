@@ -380,18 +380,18 @@ As well as Bitcoin Core Developers and everyone that submitted issues or helped 
 Older releases
 ==============
 
-Hatch was previously known as Darkcoin.
+Hatch was previously known as Hatch.
 
-Darkcoin tree 0.8.x was a fork of Litecoin tree 0.8, original name was XCoin
+Hatch tree 0.8.x was a fork of Litecoin tree 0.8, original name was XCoin
 which was first released on Jan/18/2014.
 
-Darkcoin tree 0.9.x was the open source implementation of masternodes based on
+Hatch tree 0.9.x was the open source implementation of masternodes based on
 the 0.8.x tree and was first released on Mar/13/2014.
 
-Darkcoin tree 0.10.x used to be the closed source implementation of Darksend
+Hatch tree 0.10.x used to be the closed source implementation of Darksend
 which was released open source on Sep/25/2014.
 
-Hatch Core tree 0.11.x was a fork of Bitcoin Core tree 0.9, Darkcoin was rebranded
+Hatch Core tree 0.11.x was a fork of Bitcoin Core tree 0.9, Hatch was rebranded
 to Hatch.
 
 Hatch Core tree 0.12.0.x was a fork of Bitcoin Core tree 0.10.

@@ -52,11 +52,11 @@ reachable from the Tor network. Add these lines to your /etc/tor/torrc (or equiv
 config file):
 
 	HiddenServiceDir /var/lib/tor/hatchcore-service/
-	HiddenServicePort 9999 127.0.0.1:9999
-	HiddenServicePort 19999 127.0.0.1:19999
+	HiddenServicePort 8888 127.0.0.1:8888
+	HiddenServicePort 18888 127.0.0.1:18888
 
 The directory can be different of course, but (both) port numbers should be equal to
-your hatchd's P2P listen port (9999 by default).
+your hatchd's P2P listen port (8888 by default).
 
 	-externalip=X   You can tell Hatch Core about its publicly reachable address using
 	                this option, and this can be a .onion address. Given the above
@@ -91,7 +91,7 @@ as well, use `discover` instead:
 
 	./hatchd ... -discover
 
-and open port 9999 on your firewall (or use -upnp).
+and open port 8888 on your firewall (or use -upnp).
 
 If you only want to use Tor to reach onion addresses, but not use it as a proxy
 for normal IPv4/IPv6 communication, use:
@@ -102,7 +102,7 @@ for normal IPv4/IPv6 communication, use:
 3. List of known Hatch Core Tor relays
 ------------------------------------
 
-* [darkcoinie7ghp67.onion](http://darkcoinie7ghp67.onion/)
+* [hatchie7ghp67.onion](http://hatchie7ghp67.onion/)
 * [drktalkwaybgxnoq.onion](http://drktalkwaybgxnoq.onion/)
 * [drkcoinooditvool.onion](http://drkcoinooditvool.onion/)
 * [darkcoxbtzggpmcc.onion](http://darkcoxbtzggpmcc.onion/)

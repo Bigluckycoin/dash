@@ -1,5 +1,5 @@
 ---
-name: "hatch-linux-0.12"
+name: "hatch-linux-1.0.0.1"
 enable_cache: true
 suites:
 - "trusty"
