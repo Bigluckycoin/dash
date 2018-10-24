@@ -89,7 +89,7 @@ You can confirm that remote server is on the correct block by issuing
 
 ```hatch-cli getinfo```
 
-and comparing with the official explorer at https://explorer.hatch.org/chain/Hatch
+and comparing with the official explorer at https://explorer.org/chain/Hatch
 
 ### Local
 

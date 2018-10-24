@@ -1,4 +1,4 @@
-Hatch Core staging tree 1.0.0.1
+Hatch Core staging tree 0.12.3
 ===============================
 
 `master:` [![Build Status](https://travis-ci.org/hatchpay/hatch.svg?branch=master)](https://travis-ci.org/hatchpay/hatch) `develop:` [![Build Status](https://travis-ci.org/hatchpay/hatch.svg?branch=develop)](https://travis-ci.org/hatchpay/hatch/branches)
