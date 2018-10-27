@@ -3,7 +3,7 @@ Hatch Core version 0.12.3.3
 
 Release is now available from:
 
-  <https://www.hatch.org/downloads/#wallets>
+  <https://www.www.org/downloads/#wallets>
 
 This is a critical bugfix release.
 

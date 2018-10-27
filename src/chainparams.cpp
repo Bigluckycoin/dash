@@ -228,7 +228,7 @@ public:
         nPoolMaxTransactions = 3;
         nFulfilledRequestExpireTime = 60*60; // fulfilled requests expire in 1 hour
 
-        strSporkAddress = "XpHMrEFrJLpWu71ZCJmdePGZVVSLsYEyqV";
+        strSporkAddress = "Xu7PVuAZ3TXPsQ6kRoLLsvN5jXazMguazx";
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
@@ -351,7 +351,7 @@ public:
         nPoolMaxTransactions = 3;
         nFulfilledRequestExpireTime = 5*60; // fulfilled requests expire in 5 minutes
 
-        strSporkAddress = "XqmwFviKpPXvzkEuMHiMYVna4uut34aN3f";
+        strSporkAddress = "yP7DvfqSnLLc57S7SWqgwoRvTVXp9hxRTc";
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
@@ -477,7 +477,7 @@ public:
         nPoolMaxTransactions = 3;
         nFulfilledRequestExpireTime = 5*60; // fulfilled requests expire in 5 minutes
 
-        strSporkAddress = "XqmwFviKpPXvzkEuMHiMYVna4uut34aN3f";
+        strSporkAddress = "yP7DvfqSnLLc57S7SWqgwoRvTVXp9hxRTc";
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
@@ -487,7 +487,7 @@ public:
 
         chainTxData = ChainTxData{
             devnetGenesis.GetBlockTime(), // * UNIX timestamp of devnet genesis block
-            0,                            // * we only have 2 coinbase transactions when a devnet is started up
+            2,                            // * we only have 2 coinbase transactions when a devnet is started up
             0.01                          // * estimated number of transactions per second
         };
     }
@@ -574,8 +574,8 @@ public:
 
         nFulfilledRequestExpireTime = 5*60; // fulfilled requests expire in 5 minutes
 
-        // privKey: cP4EKFyJsHT39LDqgdcB43Y3YXjNyjb5Fuas1GQSeAtjnZWmZEQK
-        strSporkAddress = "XhySdV4zwjzVdLFRSTcgZW7Aj16fQzBoaA";
+        // privKey: 
+        strSporkAddress = "yav5XL1QPWK8cbXehBaZ4pMLUf6BFcBPtM";
 
         checkpointData = (CCheckpointData){
             boost::assign::map_list_of
