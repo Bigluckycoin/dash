@@ -355,12 +355,12 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            (    1500, uint256S("0x00000daa962e10f744ee64e4c3df79d09626f6c0989e6adcc2a1cf1fabed0d67"))
+            (    0, uint256S("0x00000bf8b02180fa3860e3f4fbfaab76db14fbfd1323d1d3ad06d83b828b6644"))
         };
 
         chainTxData = ChainTxData{        
-            1541060086, // * UNIX timestamp of last known number of transactions
-            1501,    // * total number of transactions between genesis and that timestamp
+            1540220401, // * UNIX timestamp of last known number of transactions
+            0,    // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0.01        // * estimated number of transactions per second after that timestamp
         };
