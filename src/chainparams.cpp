@@ -138,7 +138,7 @@ public:
         consensus.nGovernanceFilterElements = 20000;
         consensus.nMasternodeMinimumConfirmations = 15;
         consensus.BIP34Height = 951;
-        consensus.BIP34Hash = uint256S("0x000001f35e70f7c5705f64c6c5cc3dea9449e74d5b5c7cf74dad1bcca14a8012");
+        consensus.BIP34Hash = uint256S("0x00000706fe350c1d9bf70325fadca2cf91bf0f55eb84b5477110f8fbc496c643");
         consensus.BIP65Height = 619382; // 00000000000076d8fcea02ec0963de4abfd01e771fec0863f960c2c64fe6f357
         consensus.BIP66Height = 245817; // 00000000000b1fa2dfa312863570e13fae9ca7b5566cb27e55422620b469aefa
         consensus.DIP0001Height = 782208;
@@ -175,10 +175,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_BIP147].nThreshold = 3226; // 80% of 4032
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000"); // 0
+        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000000000602145ca"); // 1500
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x000000fa6116f5d6c6ce9b60bd431469e40b4fe55feeeda59e33cd2f0b863196"); // 0
+        consensus.defaultAssumeValid = uint256S("0x00000daa962e10f744ee64e4c3df79d09626f6c0989e6adcc2a1cf1fabed0d67"); // 1500
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
