@@ -108,13 +108,13 @@ class ProxyTest(BitcoinTestFramework):
 
         if self.have_ipv6:
             # Test: outgoing IPv6 connection through node
-            node.addnode("[1233:3432:2434:2343:3234:2345:6546:4534]:5443", "onetry")
+            node.addnode("[1233:3432:2434:2343:3234:2345:6546:4534]:8888", "onetry")
             cmd = proxies[1].queue.get()
             assert(isinstance(cmd, Socks5Command))
             # Note: bitcoind's SOCKS5 implementation only sends atyp DOMAINNAME, even if connecting directly to IPv4/IPv6
             assert_equal(cmd.atyp, AddressType.DOMAINNAME)
             assert_equal(cmd.addr, b"1233:3432:2434:2343:3234:2345:6546:4534")
-            assert_equal(cmd.port, 5443)
+            assert_equal(cmd.port, 8888)
             if not auth:
                 assert_equal(cmd.username, None)
                 assert_equal(cmd.password, None)
@@ -122,24 +122,24 @@ class ProxyTest(BitcoinTestFramework):
 
         if test_onion:
             # Test: outgoing onion connection through node
-            node.addnode("bitcoinostk4e4re.onion:8333", "onetry")
+            node.addnode("bitcoinostk4e4re.onion:8888", "onetry")
             cmd = proxies[2].queue.get()
             assert(isinstance(cmd, Socks5Command))
             assert_equal(cmd.atyp, AddressType.DOMAINNAME)
             assert_equal(cmd.addr, b"bitcoinostk4e4re.onion")
-            assert_equal(cmd.port, 8333)
+            assert_equal(cmd.port, 8888)
             if not auth:
                 assert_equal(cmd.username, None)
                 assert_equal(cmd.password, None)
             rv.append(cmd)
 
         # Test: outgoing DNS name connection through node
-        node.addnode("node.noumenon:8333", "onetry")
+        node.addnode("node.noumenon:8888", "onetry")
         cmd = proxies[3].queue.get()
         assert(isinstance(cmd, Socks5Command))
         assert_equal(cmd.atyp, AddressType.DOMAINNAME)
         assert_equal(cmd.addr, b"node.noumenon")
-        assert_equal(cmd.port, 8333)
+        assert_equal(cmd.port, 8888)
         if not auth:
             assert_equal(cmd.username, None)
             assert_equal(cmd.password, None)
