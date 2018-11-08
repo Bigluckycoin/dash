@@ -175,10 +175,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_BIP147].nThreshold = 3226; // 80% of 4032
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000000000602145ca"); // 1500
+        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000000026a3b8440"); // 4991
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x00000daa962e10f744ee64e4c3df79d09626f6c0989e6adcc2a1cf1fabed0d67"); // 1500
+        consensus.defaultAssumeValid = uint256S("0x000002bf6899d78b45c2e2a2127ecc4e8d573d8d5a33baaa9099a7a2d9b0f2bd"); // 4991
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -199,9 +199,8 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0xed39d46b76da520fe092048c3025f05687936f8eaecef04cad63acd7e9825dd9"));
 
 
-        vSeeds.clear();
-        
-		
+        vSeeds.push_back(CDNSSeedData("hatch.ga", "dnsseed.hatch.ga"));
+	
         // Hatch addresses start with 'X'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,76);
         // Hatch script addresses start with '7'
@@ -233,11 +232,12 @@ public:
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
             (  1500, uint256S("0x00000daa962e10f744ee64e4c3df79d09626f6c0989e6adcc2a1cf1fabed0d67"))
+			(  4991, uint256S("0x000002bf6899d78b45c2e2a2127ecc4e8d573d8d5a33baaa9099a7a2d9b0f2bd"))
         };
 
         chainTxData = ChainTxData{
             1541060086, // * UNIX timestamp of last known number of transactions
-            1501,    // * total number of transactions between genesis and that timestamp
+            5003,    // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0.1         // * estimated number of transactions per second after that timestamp
         };
