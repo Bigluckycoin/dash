@@ -608,7 +608,7 @@ std::string HelpMessage(HelpMessageMode mode)
 std::string LicenseInfo()
 {
     const std::string URL_SOURCE_CODE = "<https://github.com/hatchpay/hatch>";
-    const std::string URL_WEBSITE = "<https://www.org>";
+    const std::string URL_WEBSITE = "<https://hatch.ga>";
 
     return CopyrightHolders(_("Copyright (C)"), 2014, COPYRIGHT_YEAR) + "\n" +
            "\n" +

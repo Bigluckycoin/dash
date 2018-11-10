@@ -50,7 +50,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 36
 
 #define QAPP_ORG_NAME "Hatch"
-#define QAPP_ORG_DOMAIN "www.org"
+#define QAPP_ORG_DOMAIN "hatch.ga"
 #define QAPP_APP_NAME_DEFAULT "Hatch-Qt"
 #define QAPP_APP_NAME_TESTNET "Hatch-Qt-testnet"
 #define QAPP_APP_NAME_DEVNET "Hatch-Qt-%s"

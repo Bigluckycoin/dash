@@ -1,8 +1,8 @@
 Source: hatch
 Section: utils
 Priority: optional
-Maintainer: Holger Schinzel <holger@www.org>
-Uploaders: Holger Schinzel <holger@www.org>
+Maintainer: Holger Schinzel <holger@hatch.ga>
+Uploaders: Holger Schinzel <holger@hatch.ga>
 Build-Depends: debhelper,
  devscripts,
  automake,
@@ -26,7 +26,7 @@ Build-Depends: debhelper,
  python,
  libzmq3-dev
 Standards-Version: 3.9.2
-Homepage: https://www.www.org/
+Homepage: https://www.hatch.ga/
 Vcs-Git: git://github.com/hatchpay/hatch.git
 Vcs-Browser: https://github.com/hatchpay/hatch
 

@@ -1,7 +1,7 @@
 Hatch Core 0.12.1
 =====================
 
-This is the official reference wallet for Hatch digital currency and comprises the backbone of the Hatch peer-to-peer network. You can [download Hatch Core](https://www.www.org/downloads/) or [build it yourself](#building) using the guides below.
+This is the official reference wallet for Hatch digital currency and comprises the backbone of the Hatch peer-to-peer network. You can [download Hatch Core](https://www.hatch.ga/downloads/) or [build it yourself](#building) using the guides below.
 
 Running
 ---------------------
@@ -27,7 +27,7 @@ Drag Hatch-Qt to your applications folder, and then run Hatch-Qt.
 * See the [Hatch documentation](https://hatchpay.atlassian.net/wiki/display/DOC)
 for help and more information.
 * Ask for help on [Hatch Nation Discord](http://hatchchat.org)
-* Ask for help on the [Hatch Forum](https://www.org/forum)
+* Ask for help on the [Hatch Forum](https://hatch.ga/forum)
 
 Building
 ---------------------
@@ -57,7 +57,7 @@ The Hatch Core repo's [root README](/README.md) contains relevant information on
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [Hatch Forum](https://www.org/forum), in the Development & Technical Discussion board.
+* Discuss on the [Hatch Forum](https://hatch.ga/forum), in the Development & Technical Discussion board.
 * Discuss on [Hatch Nation Discord](http://hatchchat.org)
 
 ### Miscellaneous

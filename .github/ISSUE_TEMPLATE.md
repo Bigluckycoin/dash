@@ -4,7 +4,7 @@ This issue tracker is only for technical issues related to Hatch Core.
 
 General Hatch questions and/or support requests and are best directed to the [Hatchpay Reddit](https://www.reddit.com/r/hatchpay/).
 
-To report critical security issues, email infosec@www.org instead of creating Github issues.
+To report critical security issues, email infosec@hatch.ga instead of creating Github issues.
 
 ### Describe the issue
 
