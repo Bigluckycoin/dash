@@ -132,15 +132,15 @@ public:
         consensus.nBudgetPaymentsCycleBlocks = 16616; // ~(60*24*30)/2.6, actual number of blocks per month is 200700 / 12 = 16725
         consensus.nBudgetPaymentsWindowBlocks = 100;
         consensus.nSuperblockStartBlock = 614820; // The block at which 12.1 goes live (end of final 12.0 budget cycle)
-        consensus.nSuperblockStartHash = uint256S("0000000000020cb27c7ef164d21003d5d20cdca2f54dd9a9ca6d45f4d47f8aa3");
+        consensus.nSuperblockStartHash = uint256S();
         consensus.nSuperblockCycle = 16616; // ~(60*24*30)/2.6, actual number of blocks per month is 200700 / 12 = 16725
         consensus.nGovernanceMinQuorum = 10;
         consensus.nGovernanceFilterElements = 20000;
         consensus.nMasternodeMinimumConfirmations = 15;
         consensus.BIP34Height = 951;
         consensus.BIP34Hash = uint256S("0x00000706fe350c1d9bf70325fadca2cf91bf0f55eb84b5477110f8fbc496c643");
-        consensus.BIP65Height = 619382; // 00000000000076d8fcea02ec0963de4abfd01e771fec0863f960c2c64fe6f357
-        consensus.BIP66Height = 245817; // 00000000000b1fa2dfa312863570e13fae9ca7b5566cb27e55422620b469aefa
+        consensus.BIP65Height = 619382; // 
+        consensus.BIP66Height = 245817; // 
         consensus.DIP0001Height = 782208;
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~uint256(0) >> 20
         consensus.nPowTargetTimespan = 24 * 60 * 60; // Hatch: 1 day
@@ -175,10 +175,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_BIP147].nThreshold = 3226; // 80% of 4032
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000000026a3b8440"); // 4991
+        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000000009ddcf93b2"); // 9918
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x000002bf6899d78b45c2e2a2127ecc4e8d573d8d5a33baaa9099a7a2d9b0f2bd"); // 4991
+        consensus.defaultAssumeValid = uint256S("0x0000010f0856a55ce8a5033b7f367bb82adc741f46348180740a0750e5c81dde"); // 9918
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -233,11 +233,12 @@ public:
             boost::assign::map_list_of
             (  1500, uint256S("0x00000daa962e10f744ee64e4c3df79d09626f6c0989e6adcc2a1cf1fabed0d67"))
 			(  4991, uint256S("0x000002bf6899d78b45c2e2a2127ecc4e8d573d8d5a33baaa9099a7a2d9b0f2bd"))
+			(  9918, uint256S("0x0000010f0856a55ce8a5033b7f367bb82adc741f46348180740a0750e5c81dde"))
         };
 
         chainTxData = ChainTxData{
-            1541060086, // * UNIX timestamp of last known number of transactions
-            5003,    // * total number of transactions between genesis and that timestamp
+            1542236203, // * UNIX timestamp of last known number of transactions
+            9930,    // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0.1         // * estimated number of transactions per second after that timestamp
         };
