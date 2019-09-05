@@ -216,11 +216,11 @@ public:
         consensus.nMasternodeMinimumConfirmations = 15;
         consensus.BIP34Height = 951;
         consensus.BIP34Hash = uint256S("0x00000706fe350c1d9bf70325fadca2cf91bf0f55eb84b5477110f8fbc496c643");
-        consensus.BIP65Height = 160001; //
-        consensus.BIP66Height = 160001; //
-        consensus.DIP0001Height = 160002;
-        consensus.DIP0003Height = 160002;
-        consensus.DIP0003EnforcementHeight = 179042;
+        consensus.BIP65Height = 158001; //
+        consensus.BIP66Height = 158001; //
+        consensus.DIP0001Height = 158002;
+        consensus.DIP0003Height = 158002;
+        consensus.DIP0003EnforcementHeight = 158002;
         consensus.DIP0003EnforcementHash = uint256();
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~uint256(0) >> 20
         consensus.nPowTargetTimespan = 24 * 60 * 60; // Hatch: 1 day
