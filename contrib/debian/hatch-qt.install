@@ -1,0 +1,6 @@
+usr/local/bin/hatch-qt usr/bin
+share/pixmaps/hatch32.xpm usr/share/pixmaps
+share/pixmaps/hatch16.xpm usr/share/pixmaps
+share/pixmaps/hatch128.png usr/share/pixmaps
+debian/hatch-qt.desktop usr/share/applications
+debian/hatch-qt.protocol usr/share/kde4/services/

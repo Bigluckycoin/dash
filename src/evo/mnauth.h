@@ -1,9 +1,9 @@
-// Copyright (c) 2019 The Dash Core developers
+// Copyright (c) 2019 The Hatch Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef DASH_MNAUTH_H
-#define DASH_MNAUTH_H
+#ifndef HATCH_MNAUTH_H
+#define HATCH_MNAUTH_H
 
 #include "bls/bls.h"
 #include "serialize.h"
@@ -55,4 +55,4 @@ public:
 };
 
 
-#endif //DASH_MNAUTH_H
+#endif //HATCH_MNAUTH_H

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Hatch Core
+Comment=Hatch P2P Cryptocurrency
+Comment[de]=Verbinde mit dem Hatch peer-to-peer Netzwerk
+Comment[fr]=Hatch, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Hatch, eşten eşe kriptografik sanal para birimi
+Exec=hatch-qt %u
+Terminal=false
+Type=Application
+Icon=hatch128
+MimeType=x-scheme-handler/hatch;
+Categories=Office;Finance;

@@ -1,9 +1,9 @@
-// Copyright (c) 2017-2018 The Dash Core developers
+// Copyright (c) 2017-2018 The Hatch Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef DASH_CBTX_H
-#define DASH_CBTX_H
+#ifndef HATCH_CBTX_H
+#define HATCH_CBTX_H
 
 #include "consensus/validation.h"
 #include "primitives/transaction.h"
@@ -49,4 +49,4 @@ bool CheckCbTxMerkleRoots(const CBlock& block, const CBlockIndex* pindex, CValid
 bool CalcCbTxMerkleRootMNList(const CBlock& block, const CBlockIndex* pindexPrev, uint256& merkleRootRet, CValidationState& state);
 bool CalcCbTxMerkleRootQuorums(const CBlock& block, const CBlockIndex* pindexPrev, uint256& merkleRootRet, CValidationState& state);
 
-#endif //DASH_CBTX_H
+#endif //HATCH_CBTX_H

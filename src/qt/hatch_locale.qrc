@@ -1,0 +1,25 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="ar">locale/hatch_ar.qm</file>
+        <file alias="bg">locale/hatch_bg.qm</file>
+        <file alias="de">locale/hatch_de.qm</file>
+        <file alias="en">locale/hatch_en.qm</file>
+        <file alias="es">locale/hatch_es.qm</file>
+        <file alias="fi">locale/hatch_fi.qm</file>
+        <file alias="fr">locale/hatch_fr.qm</file>
+        <file alias="it">locale/hatch_it.qm</file>
+        <file alias="ja">locale/hatch_ja.qm</file>
+        <file alias="ko">locale/hatch_ko.qm</file>
+        <file alias="nl">locale/hatch_nl.qm</file>
+        <file alias="pl">locale/hatch_pl.qm</file>
+        <file alias="pt">locale/hatch_pt.qm</file>
+        <file alias="ru">locale/hatch_ru.qm</file>
+        <file alias="sk">locale/hatch_sk.qm</file>
+        <file alias="sv">locale/hatch_sv.qm</file>
+        <file alias="th">locale/hatch_th.qm</file>
+        <file alias="tr">locale/hatch_tr.qm</file>
+        <file alias="vi">locale/hatch_vi.qm</file>
+        <file alias="zh_CN">locale/hatch_zh_CN.qm</file>
+        <file alias="zh_TW">locale/hatch_zh_TW.qm</file>
+    </qresource>
+</RCC>

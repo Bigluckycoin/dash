@@ -1,9 +1,9 @@
-// Copyright (c) 2019 The Dash Core developers
+// Copyright (c) 2019 The Hatch Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef DASH_QUORUMS_CHAINLOCKS_H
-#define DASH_QUORUMS_CHAINLOCKS_H
+#ifndef HATCH_QUORUMS_CHAINLOCKS_H
+#define HATCH_QUORUMS_CHAINLOCKS_H
 
 #include "llmq/quorums.h"
 #include "llmq/quorums_signing.h"
@@ -118,4 +118,4 @@ extern CChainLocksHandler* chainLocksHandler;
 
 }
 
-#endif //DASH_QUORUMS_CHAINLOCKS_H
+#endif //HATCH_QUORUMS_CHAINLOCKS_H

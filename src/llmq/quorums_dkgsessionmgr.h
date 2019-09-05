@@ -1,9 +1,9 @@
-// Copyright (c) 2018 The Dash Core developers
+// Copyright (c) 2018 The Hatch Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef DASH_QUORUMS_DKGSESSIONMGR_H
-#define DASH_QUORUMS_DKGSESSIONMGR_H
+#ifndef HATCH_QUORUMS_DKGSESSIONMGR_H
+#define HATCH_QUORUMS_DKGSESSIONMGR_H
 
 #include "llmq/quorums_dkgsessionhandler.h"
 
@@ -76,4 +76,4 @@ extern CDKGSessionManager* quorumDKGSessionManager;
 
 }
 
-#endif //DASH_QUORUMS_DKGSESSIONMGR_H
+#endif //HATCH_QUORUMS_DKGSESSIONMGR_H
