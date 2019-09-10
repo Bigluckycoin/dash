@@ -340,7 +340,7 @@ public:
             boost::assign::map_list_of
             (  1500, uint256S("0x00000daa962e10f744ee64e4c3df79d09626f6c0989e6adcc2a1cf1fabed0d67"))
             (  4991, uint256S("0x000002bf6899d78b45c2e2a2127ecc4e8d573d8d5a33baaa9099a7a2d9b0f2bd"))
-			(  9918, uint256S("0x0000010f0856a55ce8a5033b7f367bb82adc741f46348180740a0750e5c81dde"))
+            (  9918, uint256S("0x0000010f0856a55ce8a5033b7f367bb82adc741f46348180740a0750e5c81dde"))
             ( 16912, uint256S("0x00000000003b5ea81e5ec02e049f303cc9079de0f2ab90cd29f8f08cdeebdc83"))
             ( 23912, uint256S("0x00000000002425f2b3b858e64f9bba9b7f245896b5ba84a93e491f1089558f82"))
             ( 35457, uint256S("0x00000000032b6aa99d0ecdb2774e075fcefd44b164476eac7a7084278e1f5898"))
@@ -356,7 +356,7 @@ public:
         };
 
         chainTxData = ChainTxData{
-            1568094621, // * UNIX timestamp of last known number of transactions (Block 137993)
+            1568094621, // * UNIX timestamp of last known number of transactions (Block 158152)
             171568,   // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0.1         // * estimated number of transactions per second after that timestamp
