@@ -216,12 +216,12 @@ public:
         consensus.nMasternodeMinimumConfirmations = 15;
         consensus.BIP34Height = 951;
         consensus.BIP34Hash = uint256S("0x00000706fe350c1d9bf70325fadca2cf91bf0f55eb84b5477110f8fbc496c643");
-        consensus.BIP65Height = 158001; //
-        consensus.BIP66Height = 158001; //
+        consensus.BIP65Height = 158001; // 00000000000bc06e3d6fb0accc6292861a763fc0570d97f95c10a864c17c7818
+        consensus.BIP66Height = 158001; // 00000000000bc06e3d6fb0accc6292861a763fc0570d97f95c10a864c17c7818
         consensus.DIP0001Height = 158002;
         consensus.DIP0003Height = 158002;
         consensus.DIP0003EnforcementHeight = 158002;
-        consensus.DIP0003EnforcementHash = uint256();
+        consensus.DIP0003EnforcementHash = uint256S("000000000004d7f9b881629f7d67f79617452bb51960bce1596155853d267ade");
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~uint256(0) >> 20
         consensus.nPowTargetTimespan = 24 * 60 * 60; // Hatch: 1 day
         consensus.nPowTargetSpacing = 2.5 * 60; // Hatch: 2.5 minutes
@@ -269,10 +269,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_DIP0008].nThreshold = 3226; // 80% of 4032
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000663f4e51e7be78f"); // 137993
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000001177ab45f3d6dece"); // 158152
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x000000000039fda10912643ada2de4c23daa5f12c1cb396b23192e18c5fdf823"); // 137993
+        consensus.defaultAssumeValid = uint256S("0x000000000006c67b9bb18379467adbc6630c86cffd017a6db045420686cde556"); // 158152
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -339,10 +339,10 @@ public:
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
             (  1500, uint256S("0x00000daa962e10f744ee64e4c3df79d09626f6c0989e6adcc2a1cf1fabed0d67"))
-			(  4991, uint256S("0x000002bf6899d78b45c2e2a2127ecc4e8d573d8d5a33baaa9099a7a2d9b0f2bd"))
+            (  4991, uint256S("0x000002bf6899d78b45c2e2a2127ecc4e8d573d8d5a33baaa9099a7a2d9b0f2bd"))
 			(  9918, uint256S("0x0000010f0856a55ce8a5033b7f367bb82adc741f46348180740a0750e5c81dde"))
-			( 16912, uint256S("0x00000000003b5ea81e5ec02e049f303cc9079de0f2ab90cd29f8f08cdeebdc83"))
-			( 23912, uint256S("0x00000000002425f2b3b858e64f9bba9b7f245896b5ba84a93e491f1089558f82"))
+            ( 16912, uint256S("0x00000000003b5ea81e5ec02e049f303cc9079de0f2ab90cd29f8f08cdeebdc83"))
+            ( 23912, uint256S("0x00000000002425f2b3b858e64f9bba9b7f245896b5ba84a93e491f1089558f82"))
             ( 35457, uint256S("0x00000000032b6aa99d0ecdb2774e075fcefd44b164476eac7a7084278e1f5898"))
             ( 45479, uint256S("0x000000000278a26de48ccfe81fa041837b063bb72897957fea494fa0440bcf75"))
             ( 55895, uint256S("0x00000000003cd4d49ea1f696b6375613dd9ac829507fe2893125abf71204225a"))
@@ -351,12 +351,13 @@ public:
             ( 75095, uint256S("0x000000000041654054e002d9e739bd221e68c926cc8cc273406ec3497f8d4ed7"))
             ( 88805, uint256S("0x0000000003baf9d0bebfe710d3bf6ad0815d492dce2f806383edf5c444433247"))
             ( 107996, uint256S("0x000000003539851a27ad1ed217389401869331f2aed1ddc3ed2df0a6faebee54"))
-            ( 137993, uint256S("0x000000000039fda10912643ada2de4c23daa5f12c1cb396b23192e18c5fdf823"))			
+            ( 137993, uint256S("0x000000000039fda10912643ada2de4c23daa5f12c1cb396b23192e18c5fdf823"))
+            ( 158152, uint256S("0x000000000006c67b9bb18379467adbc6630c86cffd017a6db045420686cde556"))			
         };
 
         chainTxData = ChainTxData{
-            1564835739, // * UNIX timestamp of last known number of transactions (Block 137993)
-            146856,   // * total number of transactions between genesis and that timestamp
+            1568094621, // * UNIX timestamp of last known number of transactions (Block 137993)
+            171568,   // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0.1         // * estimated number of transactions per second after that timestamp
         };
